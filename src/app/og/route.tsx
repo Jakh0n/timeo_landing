@@ -75,7 +75,10 @@ export async function GET(req: NextRequest) {
           </div>
         </div>
 
+        {/* ImageResponse only supports the img element, not next/image. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          alt="The week’s schedule, from one link."
           src={`${siteConfig.url}/dashboard.png`}
           width={900}
           style={{
