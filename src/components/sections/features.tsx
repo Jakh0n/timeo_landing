@@ -1,41 +1,48 @@
 import Features from "@/components/features-horizontal";
 import Section from "@/components/section";
-import { BarChart3, Brain, FileText, LineChart } from "lucide-react";
+import { Clock, Link2, SunMoon, ClipboardCheck } from "lucide-react";
 
 const data = [
   {
     id: 1,
-    title: "AI-Powered Dashboard",
-    content: "Visualize trends and gain insights at a glance.",
+    title: "One link for the whole team",
+    content: "No worker logins, no second link for the result.",
     image: "/dashboard.png",
-    icon: <BarChart3 className="h-6 w-6 text-primary" />,
+    icon: <Link2 className="h-6 w-6 text-primary" />,
   },
   {
     id: 2,
-    title: "Natural Language Processing",
-    content: "Analyze text and extract sentiment effortlessly.",
+    title: "Day and night, weekday and weekend",
+    content:
+      "Headcount is set per branch, not as a single weekly number.",
     image: "/dashboard.png",
-    icon: <Brain className="h-6 w-6 text-primary" />,
+    icon: <SunMoon className="h-6 w-6 text-primary" />,
   },
   {
     id: 3,
-    title: "Predictive Analytics",
-    content: "Forecast trends and make data-driven decisions.",
+    title: "Availability with real hours",
+    content:
+      "Staff choose the days, the shift, and the time range they can work.",
     image: "/dashboard.png",
-    icon: <LineChart className="h-6 w-6 text-primary" />,
+    icon: <Clock className="h-6 w-6 text-primary" />,
   },
   {
     id: 4,
-    title: "Automated Reporting",
-    content: "Generate comprehensive reports with one click.",
+    title: "Review before it is final",
+    content:
+      "Generate the schedule, change it, then confirm. Until you confirm, nothing is published.",
     image: "/dashboard.png",
-    icon: <FileText className="h-6 w-6 text-primary" />,
+    icon: <ClipboardCheck className="h-6 w-6 text-primary" />,
   },
 ];
 
 export default function Component() {
   return (
-    <Section title="Features" subtitle="User Flows and Navigational Structures">
+    <Section
+      id="product"
+      title="Product"
+      subtitle="Built for the way a restaurant actually schedules"
+    >
       <Features collapseDelay={5000} linePosition="bottom" data={data} />
     </Section>
   );

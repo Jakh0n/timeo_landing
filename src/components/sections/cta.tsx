@@ -8,8 +8,9 @@ export default function CtaSection() {
   return (
     <Section
       id="cta"
-      title="Ready to get started?"
-      subtitle="Start your free trial today."
+      title="Get started"
+      subtitle="The week’s schedule, from one link."
+      description="Set how many people you need. Staff send availability without an account. You review the schedule and confirm it."
       className="bg-primary/10 rounded-xl py-16"
     >
       <div className="flex flex-col w-full sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
@@ -21,7 +22,7 @@ export default function CtaSection() {
           )}
         >
           <Icons.logo className="h-6 w-6" />
-          Get started for free
+          Get started
         </Link>
       </div>
     </Section>

@@ -3,42 +3,25 @@
 import { motion } from "framer-motion";
 
 import { Icons } from "@/components/icons";
-import HeroVideoDialog from "@/components/magicui/hero-video";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 const ease = [0.16, 1, 0.3, 1];
 
 function HeroPill() {
   return (
-    <motion.a
-      href="/blog/introducing-acme-ai"
+    <motion.div
       className="flex w-auto items-center space-x-2 rounded-full bg-primary/20 px-2 py-1 ring-1 ring-accent whitespace-pre"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease }}
     >
-      <div className="w-fit rounded-full bg-accent px-2 py-0.5 text-center text-xs font-medium text-primary sm:text-sm">
-        📣 Announcement
-      </div>
       <p className="text-xs font-medium text-primary sm:text-sm">
-        Introducing Acme.ai
+        Restaurant staff scheduling
       </p>
-      <svg
-        width="12"
-        height="12"
-        className="ml-1"
-        viewBox="0 0 12 12"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.78141 5.33312L5.20541 1.75712L6.14808 0.814453L11.3334 5.99979L6.14808 11.1851L5.20541 10.2425L8.78141 6.66645H0.666748V5.33312H8.78141Z"
-          fill="hsl(var(--primary))"
-        />
-      </svg>
-    </motion.a>
+    </motion.div>
   );
 }
 
@@ -55,7 +38,7 @@ function HeroTitles() {
           staggerChildren: 0.2,
         }}
       >
-        {["Automate", "your", "workflow", "with AI"].map((text, index) => (
+        {["The", "week’s", "schedule,", "from", "one", "link."].map((text, index) => (
           <motion.span
             key={index}
             className="inline-block px-1 md:px-2 text-balance font-semibold"
@@ -81,7 +64,8 @@ function HeroTitles() {
           ease,
         }}
       >
-        No matter what problem you have, our AI can help you solve it.
+        Set how many people you need. Staff send availability without an
+        account. You review the schedule and confirm it.
       </motion.p>
     </div>
   );
@@ -104,17 +88,18 @@ function HeroCTA() {
           )}
         >
           <Icons.logo className="h-6 w-6" />
-          Get started for free
+          Get started
+        </Link>
+        <Link
+          href="/login"
+          className={cn(
+            buttonVariants({ variant: "outline" }),
+            "w-full sm:w-auto"
+          )}
+        >
+          Log in
         </Link>
       </motion.div>
-      <motion.p
-        className="mt-5 text-sm text-muted-foreground"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.0, duration: 0.8 }}
-      >
-        7 day free trial. No credit card required.
-      </motion.p>
     </>
   );
 }
@@ -127,12 +112,12 @@ function HeroImage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1.2, duration: 1, ease }}
     >
-      <HeroVideoDialog
-        animationStyle="from-center"
-        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-        thumbnailSrc="/dashboard.png"
-        thumbnailAlt="Hero Video"
-        className="border rounded-lg shadow-lg max-w-screen-lg mt-16"
+      <Image
+        src="/dashboard.png"
+        alt="The week’s schedule, from one link."
+        width={1200}
+        height={720}
+        className="border rounded-lg shadow-lg max-w-screen-lg mt-16 h-auto w-full"
       />
     </motion.div>
   );

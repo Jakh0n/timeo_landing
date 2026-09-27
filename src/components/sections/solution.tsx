@@ -9,38 +9,37 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Advanced AI Algorithms",
-    description:
-      "Our platform utilizes cutting-edge AI algorithms to provide accurate and efficient solutions for your business needs.",
+    title: "One link for the whole team",
+    description: "No worker logins, no second link for the result.",
     className: "hover:bg-red-500/10 transition-all duration-500 ease-out",
     content: (
       <>
         <Safari
           src={`/dashboard.png`}
-          url="https://acme.ai"
+          url="timeo"
           className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
       </>
     ),
   },
   {
-    title: "Secure Data Handling",
+    title: "Day and night, weekday and weekend",
     description:
-      "We prioritize your data security with state-of-the-art encryption and strict privacy protocols, ensuring your information remains confidential.",
+      "Headcount is set per branch, not as a single weekly number.",
     className:
       "order-3 xl:order-none hover:bg-blue-500/10 transition-all duration-500 ease-out",
     content: (
       <Safari
         src={`/dashboard.png`}
-        url="https://acme.ai"
+        url="timeo"
         className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
       />
     ),
   },
   {
-    title: "Seamless Integration",
+    title: "Availability with real hours",
     description:
-      "Easily integrate our AI solutions into your existing workflows and systems for a smooth and efficient operation.",
+      "Staff choose the days, the shift, and the time range they can work.",
     className:
       "md:row-span-2 hover:bg-orange-500/10 transition-all duration-500 ease-out",
     content: (
@@ -57,16 +56,16 @@ const features = [
         />
         <Safari
           src={`/dashboard.png`}
-          url="https://acme.ai"
+          url="timeo"
           className="-mb-48 ml-12 mt-16 h-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-x-[-10px] transition-all duration-300"
         />
       </>
     ),
   },
   {
-    title: "Customizable Solutions",
+    title: "Review before it is final",
     description:
-      "Tailor our AI services to your specific needs with flexible customization options, allowing you to get the most out of our platform.",
+      "Generate the schedule, change it, then confirm. Until you confirm, nothing is published.",
     className:
       "flex-row order-4 md:col-span-2 md:flex-row xl:order-none hover:bg-green-500/10 transition-all duration-500 ease-out",
     content: (
@@ -74,7 +73,7 @@ const features = [
         <Ripple className="absolute -bottom-full" />
         <Safari
           src={`/dashboard.png`}
-          url="https://acme.ai"
+          url="timeo"
           className="-mb-32 mt-4 max-h-64 w-full px-4 select-none drop-shadow-[0_0_28px_rgba(0,0,0,.1)] group-hover:translate-y-[-10px] transition-all duration-300"
         />
       </>
@@ -85,9 +84,9 @@ const features = [
 export default function Component() {
   return (
     <Section
-      title="Solution"
-      subtitle="Empower Your Business with AI Workflows"
-      description="Generic AI tools won't suffice. Our platform is purpose-built to provide exceptional AI-driven solutions for your unique business needs."
+      title="Product"
+      subtitle="Built for the way a restaurant actually schedules"
+      description="Set how many people you need. Staff send availability without an account. You review the schedule and confirm it."
       className="bg-neutral-100 dark:bg-neutral-900"
     >
       <div className="mx-auto mt-16 grid max-w-sm grid-cols-1 gap-6 text-gray-500 md:max-w-3xl md:grid-cols-2 xl:grid-rows-2 md:grid-rows-3 xl:max-w-6xl xl:auto-rows-fr xl:grid-cols-3">

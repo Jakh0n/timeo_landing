@@ -1,37 +1,41 @@
 import Features from "@/components/features-vertical";
 import Section from "@/components/section";
-import { Sparkles, Upload, Zap } from "lucide-react";
+import { CalendarClock, Link2, ListChecks } from "lucide-react";
 
 const data = [
   {
     id: 1,
-    title: "1. Upload Your Data",
+    title: "1. Set the requirement",
     content:
-      "Simply upload your data to our secure platform. We support various file formats and data types to ensure a seamless integration with your existing systems.",
+      "Pick a branch and say how many people you need for weekday and weekend, day and night.",
     image: "/dashboard.png",
-    icon: <Upload className="w-6 h-6 text-primary" />,
+    icon: <CalendarClock className="w-6 h-6 text-primary" />,
   },
   {
     id: 2,
-    title: "2. Click Start",
+    title: "2. Share one link",
     content:
-      "Our advanced AI algorithms automatically process and analyze your data, extracting valuable insights and patterns that would be difficult to identify manually.",
+      "Staff open it with no account, enter their name and employee ID, and mark when they can work.",
     image: "/dashboard.png",
-    icon: <Zap className="w-6 h-6 text-primary" />,
+    icon: <Link2 className="w-6 h-6 text-primary" />,
   },
   {
     id: 3,
-    title: "3. Get Actionable Insights",
+    title: "3. Confirm the schedule",
     content:
-      "Receive clear, actionable insights and recommendations based on the AI analysis. Use these insights to make data-driven decisions and improve your business strategies.",
+      "Generate the week, adjust it, and confirm. Staff use the same link to see their shifts.",
     image: "/dashboard.png",
-    icon: <Sparkles className="w-6 h-6 text-primary" />,
+    icon: <ListChecks className="w-6 h-6 text-primary" />,
   },
 ];
 
 export default function Component() {
   return (
-    <Section title="How it works" subtitle="Just 3 steps to get started">
+    <Section
+      id="how-it-works"
+      title="How it works"
+      subtitle="Three steps to next week’s rota"
+    >
       <Features data={data} />
     </Section>
   );

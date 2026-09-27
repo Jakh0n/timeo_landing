@@ -5,21 +5,21 @@ import { Brain, Shield, Zap } from "lucide-react";
 
 const problems = [
   {
-    title: "Data Overload",
+    title: "Set the requirement",
     description:
-      "Businesses struggle to make sense of vast amounts of complex data, missing out on valuable insights that could drive growth and innovation.",
+      "Pick a branch and say how many people you need for weekday and weekend, day and night.",
     icon: Brain,
   },
   {
-    title: "Slow Decision-Making",
+    title: "Share one link",
     description:
-      "Traditional data processing methods are too slow, causing businesses to lag behind market changes and miss crucial opportunities.",
+      "Staff open it with no account, enter their name and employee ID, and mark when they can work.",
     icon: Zap,
   },
   {
-    title: "Data Security Concerns",
+    title: "Confirm the schedule",
     description:
-      "With increasing cyber threats, businesses worry about the safety of their sensitive information when adopting new technologies.",
+      "Generate the week, adjust it, and confirm. Staff use the same link to see their shifts.",
     icon: Shield,
   },
 ];
@@ -27,8 +27,8 @@ const problems = [
 export default function Component() {
   return (
     <Section
-      title="Problem"
-      subtitle="Manually entering your data is a hassle."
+      title="How it works"
+      subtitle="Three steps to next week’s rota"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
         {problems.map((problem, index) => (

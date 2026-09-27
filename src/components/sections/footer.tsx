@@ -37,26 +37,10 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="max-w-6xl mx-auto border-t py-2 grid md:grid-cols-2 h-full justify-between w-full grid-cols-1 gap-1">
+        <div className="max-w-6xl mx-auto border-t py-2">
           <span className="text-sm tracking-tight text-foreground">
-            Copyright © {new Date().getFullYear()}{" "}
-            <Link href="/" className="cursor-pointer">
-              {siteConfig.name}
-            </Link>{" "}
-            - {siteConfig.description}
+            {siteConfig.description}
           </span>
-          <ul className="flex justify-start md:justify-end text-sm tracking-tight text-foreground">
-            <li className="mr-3 md:mx-4">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </Link>
-            </li>
-            <li className="mr-3 md:mx-4">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                Terms of Service
-              </Link>
-            </li>
-          </ul>
         </div>
       </div>
     </footer>

@@ -5,7 +5,7 @@ import { constructMetadata } from "@/lib/utils";
 
 export const metadata = constructMetadata({
   title: "Blog",
-  description: `Latest news and updates from ${siteConfig.name}.`,
+  description: siteConfig.description,
 });
 
 export default async function Blog() {
@@ -20,10 +20,10 @@ export default async function Blog() {
       <div className="mx-auto w-full max-w-screen-xl px-2.5 lg:px-20 mt-24">
         <div className="text-center py-16">
           <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Articles
+            How Timeo schedules a week
           </h1>
           <p className="mt-4 text-xl text-muted-foreground">
-            Latest news and updates from {siteConfig.name}
+            {siteConfig.description}
           </p>
         </div>
       </div>

@@ -1,4 +1,3 @@
-import Author from "@/components/blog-author";
 import CtaSection from "@/components/sections/cta";
 import { getPost } from "@/lib/blog";
 import { siteConfig } from "@/lib/config";
@@ -111,13 +110,7 @@ export default async function Blog({
             </div>
           </Suspense>
         </div>
-        <div className="flex items-center space-x-2">
-          <Author
-            twitterUsername={post.metadata.author}
-            name={post.metadata.author}
-            image={"/author.jpg"}
-          />
-        </div>
+        <p className="text-sm text-muted-foreground">{post.metadata.author}</p>
         <article
           className="prose dark:prose-invert mx-auto max-w-full"
           dangerouslySetInnerHTML={{ __html: post.source }}
